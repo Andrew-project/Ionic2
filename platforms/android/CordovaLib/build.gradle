@@ -29,7 +29,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
     }
@@ -40,7 +40,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 group = 'org.apache.cordova'
-version = '6.2.0'
+version = '6.2.2'
 
 android {
     compileSdkVersion cdvCompileSdkVersion
@@ -127,9 +127,9 @@ bintray {
         licenses = ['Apache-2.0']
         labels = ['android', 'cordova', 'phonegap']
         version {
-            name = version
+            name = '6.2.2'
             released  = new Date()
-            vcsTag = version
+            vcsTag = '6.2.2'
         }
     }
 }

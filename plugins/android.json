@@ -13,9 +13,6 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "io.ionic.starter"
         },
-        "cordova-plugin-geofence": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "io.ionic.starter"
         },
@@ -36,13 +33,7 @@
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-add-swift-support": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
-        "es6-promise-plugin": {
             "PACKAGE_NAME": "io.ionic.starter"
         }
     }

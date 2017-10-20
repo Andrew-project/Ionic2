@@ -41,28 +41,6 @@ module.exports = [
         ]
     },
     {
-        "id": "es6-promise-plugin.Promise",
-        "file": "plugins/es6-promise-plugin/www/promise.js",
-        "pluginId": "es6-promise-plugin",
-        "runs": true
-    },
-    {
-        "id": "cordova-plugin-geofence.TransitionType",
-        "file": "plugins/cordova-plugin-geofence/www/TransitionType.js",
-        "pluginId": "cordova-plugin-geofence",
-        "clobbers": [
-            "TransitionType"
-        ]
-    },
-    {
-        "id": "cordova-plugin-geofence.geofence",
-        "file": "plugins/cordova-plugin-geofence/www/geofence.js",
-        "pluginId": "cordova-plugin-geofence",
-        "clobbers": [
-            "geofence"
-        ]
-    },
-    {
         "id": "cordova-plugin-geolocation.geolocation",
         "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
         "pluginId": "cordova-plugin-geolocation",
@@ -105,12 +83,9 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-add-swift-support": "1.7.0",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-device": "1.1.4",
-    "es6-promise-plugin": "4.1.0",
-    "cordova-plugin-geofence": "0.7.0",
     "cordova-plugin-geolocation": "2.4.3",
     "cordova-plugin-ionic-webview": "1.1.15",
     "cordova-plugin-splashscreen": "4.0.3",
