@@ -6,14 +6,14 @@
                 <ion-icon name="add"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>Places</ion-title>
+        <ion-title>Places And Photoes</ion-title>
     </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-card *ngFor="let item of places" (click)="onOpenPlace(item)">
+    <ion-card *ngFor="let item of places; let i = index;" (click)="onOpenPlace(item, i)">
         <img [src]="item.imageUrl">
         <ion-card-content>
             <ion-card-title>

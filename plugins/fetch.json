@@ -92,5 +92,13 @@
         "variables": {
             "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
         }
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

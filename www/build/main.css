@@ -33242,6 +33242,10 @@ page-login .last-input .item-inner {
   border-bottom: 0.55px solid #c8c7cc !important;
 }
 
+page-place sebm-google-map {
+  height: 250px;
+}
+
 page-recipe .subtitle {
   text-transform: uppercase;
   color: #cccccc;

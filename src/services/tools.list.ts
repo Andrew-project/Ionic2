@@ -8,7 +8,6 @@ import {TestPage} from "../app/templates/test/test";
 import {TouchPage} from "../app/templates/touch-event/touch-event";
 import {ShoppingPage} from "../pages/shopping/shopping";
 import {RecipesPage} from "../pages/recipes/recipes";
-import {AddPlacePage} from "../pages/add-place/add-place";
 import {PlacesPage} from "../pages/places/places";
 
 export interface Tool {

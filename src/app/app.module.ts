@@ -15,7 +15,7 @@ import {ListViewPage} from './templates/list-view/list-view';
 import {LoadingPage} from './templates/loading/loading';
 import {ModalPage} from '../pages/modal/modal';
 import {TestPage} from './templates/test/test';
-import {IonicStorageModule} from '@ionic/storage';
+import {IonicStorageModule, Storage} from '@ionic/storage';
 import {PackageService} from "../services/packageService";
 import {FriendService} from "../services/friend.service";
 import {SettingService} from "../services/setting.service";
@@ -46,6 +46,7 @@ import {Geolocation} from "@ionic-native/geolocation";
 import {Camera} from "@ionic-native/camera";
 import {PlacesPage} from "../pages/places/places";
 import {PlacesService} from "../services/places";
+import {File} from "@ionic-native/file";
 
 @NgModule({
     declarations: [
@@ -124,7 +125,7 @@ import {PlacesService} from "../services/places";
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         PackageService, FriendService, SettingService, LoginService,
         ShoppingListService, ToolsListService, RecipesService, AuthService,
-        Geolocation, Camera, PlacesService
+        Geolocation, Camera, PlacesService, File
     ]
 })
 export class AppModule {
