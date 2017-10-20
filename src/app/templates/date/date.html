@@ -1,0 +1,36 @@
+<!--
+  Generated template for the Date page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>时间控件</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>日期选择1</ion-label>
+      <ion-datetime displayFormat="YYYY/MM/DD HH:mm" [(ngModel)]="timeStarts1" max="2017"
+                    max="2020-12-31" ></ion-datetime>
+    </ion-item>
+    <ion-label>{{timeDate}}</ion-label>
+    <button ion-button color="light" full (click)="log(timeStarts1)">Click me</button>
+
+    <ion-item>
+      <ion-label>日期选择2</ion-label>
+      <ion-datetime displayFormat="YYYY MMM DDD" pickerFormat="YYYY MM DDDD" [(ngModel)]="timeStarts2"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>日期选择3</ion-label>
+      <ion-datetime displayFormat="YYYY M D" pickerFormat="YYYY MM DDD" cancelText="取消" doneText="确定" dayValues="[1, 10, 20, 30]" [(ngModel)]="timeStarts2"></ion-datetime>
+    </ion-item>
+  </ion-list>
+</ion-content>

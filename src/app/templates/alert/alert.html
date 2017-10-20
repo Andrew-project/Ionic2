@@ -1,0 +1,30 @@
+<!--
+  Generated template for the Alert page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>弹框功能</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-label>Action Sheet</ion-label>
+  <button ion-button outline color="danger" round block icon-left (click)="sheet()">
+    <ion-icon name="analytics"></ion-icon>
+    Basic Action Sheet
+  </button>
+
+  <ion-label>Alert</ion-label>
+  <button ion-button round full (click)="alert()">Alert</button>
+  <button ion-button round full (click)="alertConfirm()" color="secondary">Confirm</button>
+  <button ion-button round full (click)="alertPrompt()" color="danger">Prompt Alert</button>
+  <button ion-button round full (click)="alertRadio()" color="light">Radio Alert</button>
+  <button ion-button round full (click)="alertCheckbox()" color="dark">Checkbox Alert</button>
+</ion-content>

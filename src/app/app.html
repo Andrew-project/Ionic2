@@ -1,0 +1,38 @@
+<ion-menu [content]="content" type="overlay">
+  <ion-header>
+    <ion-list style="margin: 0 !important;">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="http://yhjstatic-dev.oss-cn-shanghai.aliyuncs.com/avatar/fc75cf14-31c1-5d54-a467-5caa20d2b549.png" style="width: 5rem !important; height: 5rem !important; border-radius: 50%; overflow:hidden;">
+        </ion-avatar>
+        <h2>Lsh</h2>
+        <h4>boy</h4>
+      </ion-item>
+    </ion-list>
+    <!--<ion-toolbar>-->
+      <!--<ion-title>Pages</ion-title>-->
+    <!--</ion-toolbar>-->
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item
+              icon-left
+              *ngFor="let p of pages"
+              (click)="openPage(p)">
+        <ion-icon name="book"></ion-icon>
+        {{p.title}}
+      </button>
+      <button
+              ion-item
+              (click)="signOut()"
+              icon-left>
+        <ion-icon name="log-out"></ion-icon>
+        SignOut
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

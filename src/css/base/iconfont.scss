@@ -1,0 +1,70 @@
+@charset "utf-8";
+.projectIcon,.iconfontProject {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif, projectIcon;
+}
+
+.iconfont {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif, iconfont;
+}
+
+.projectIconMore {
+  position: relative;
+  &:before {
+    @extend .projectIcon, .font-color-global-lightest;
+    position: absolute;
+    display: table-row;
+    text-align: right;
+    content: '\e600';
+    //background-color: blue;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: remSize(30);
+  }
+}
+
+
+$iconSizeMap: (
+        "xs":remSize(17),
+        "sm":remSize(32),
+        "md":remSize(47),
+        "lg":remSize(62),
+        "xl":remSize(85),
+        "full":remSize(750)
+) !global;
+$iconR: 0.31 !global;
+@each $iconName, $iconSize in $iconSizeMap {
+  @each $paddingName, $paddingSize in $paddingSizeMap {
+    .with-iconfont-#{$iconName}-#{$paddingName} {
+      width: 16rem - $paddingSize * 3 - $iconSize*1.5;
+    }
+    .with-iconfont-R-#{$iconName}-#{$paddingName} {
+      width: 16rem - $paddingSize * 3 - $iconSize*(1+$iconR*2)*1.5;
+    }
+  }
+  .iconfont-#{$iconName} {
+    font-size: $iconSize;
+  }
+  .iconfont-R-height-#{$iconName} {
+    height: $iconSize*(1+$iconR*2);
+    line-height: $iconSize*(1+$iconR*2);
+  }
+  .iconfont-R-width-#{$iconName} {
+    width: $iconSize*(1+$iconR*2);
+  }
+  .iconfont-height-#{$iconName} {
+    height: $iconSize;
+    line-height: $iconSize;
+  }
+  .iconfont-width-#{$iconName} {
+    width: $iconSize;
+  }
+}
+
+.iconfont-R {
+  display: inline-block;
+  line-height: 1em;
+  border-radius: 16rem;
+  padding: 1em * $iconR;
+}

@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import ".././function/remSize.scss";
+//基础margin
+$marginSizeMap: (
+        "xs":remSize(10),
+        "sm":remSize(20),
+        "md":remSize(30),
+        "lg":remSize(40)
+) !global;
+@each $name, $size in $marginSizeMap {
+  .margin-#{$name} {
+    margin: $size;
+  }
+  .margin-top-#{$name} {
+    margin-top: $size;
+  }
+  .margin-bottom-#{$name} {
+    margin-bottom: $size;
+  }
+  .margin-left-#{$name} {
+    margin-left: $size;
+  }
+  .margin-right-#{$name} {
+    margin-right: $size;
+  }
+  .margin-width-#{$name} {
+    margin-right: $size;
+    margin-left: $size;
+  }
+  .margin-height-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  .margin-re-width-#{$name} {
+    margin-right: $size*-1;
+    margin-left: $size*-1;
+  }
+  .margin-re-height-#{$name} {
+    margin-top: $size*-1;
+    margin-bottom: $size*-1;
+  }
+  .margin-re-bottom-#{$name} {
+    margin-bottom: $size*-1;
+  }
+  .margin-re-left-#{$name} {
+    margin-left: $size*-1;
+  }
+  .margin-re-right-#{$name} {
+    margin-right: $size*-1;
+  }
+  .margin-re-top-#{$name} {
+    margin-top: $size*-1;
+  }
+}
+
+

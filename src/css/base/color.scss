@@ -1,0 +1,103 @@
+@charset "utf-8";
+//基础颜色
+$baseColorMap: (
+        "orange":#FF9B65,
+        "blue":#00A5DE,
+        "purple":#9280E6,
+        "pink":#FF799A,
+        "green":#00BD8F,
+        "red":#FF585C,
+        "yellow":#FFB938,
+        "darkBlue":#5595EA,
+        "white":#fff,
+        "gray":#F3F3F3
+) !global;
+$mainColor: map_get($baseColorMap, 'green') !global;
+$fontColorMap: (
+        "base":#333,
+        "lighter":#666,
+        "lightest":#999,
+        "link":#577FA4
+) !global;
+$borderColorMap: (
+        "base":#E8E8E8,
+        "heavyer":#d0d0d0
+) !global;
+$backgroundColorMap: (
+        "base":#dedede,
+        "lighter":#eee
+) !global;
+
+@each $name, $c in $baseColorMap {
+  .font-color-#{$name} {
+    color: $c !important;
+  }
+  .border-color-#{$name} {
+    border-color: $c !important;
+  }
+  .background-color-#{$name} {
+    background-color: $c !important;
+  }
+}
+
+@each $name, $c in $fontColorMap {
+  .font-color-global-#{$name} {
+    color: $c !important;
+  }
+}
+
+@each $name, $c in $borderColorMap {
+  .border-color-global-#{$name} {
+    border-color: $c !important;
+  }
+}
+
+@each $name, $c in $backgroundColorMap {
+  .background-color-global-#{$name} {
+    background-color: $c !important;
+  }
+}
+
+.border-line-top {
+  border-top: 1px solid;
+}
+
+.border-line-left {
+  border-left: 1px solid;
+}
+
+.border-line-right {
+  border-right: 1px solid;
+}
+
+.border-line-bottom {
+  border-bottom: 1px solid;
+}
+
+.border-line {
+  border: 1px solid;
+}
+
+a.a-with-list-border {
+  display: block;
+  > * {
+    border-top: 1px solid;
+  }
+  &:first-of-type > * {
+    border-top: none;
+  }
+  &.new{
+    position: relative;
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 1.64rem;
+      top: 0.2rem;
+      width: 0.5rem;;
+      height: 0.5rem;;
+      border-radius: 1rem;
+      display: block;
+      background-color: map_get($baseColorMap, 'red');
+    }
+  }
+}

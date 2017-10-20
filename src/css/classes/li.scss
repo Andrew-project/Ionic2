@@ -1,0 +1,20 @@
+
+@each $name, $size in $marginSizeMap {
+  .li-#{$name} {
+    //position: relative;
+    //&.projectIconMore:before {
+      //top: $size;
+      //bottom: $size;
+    //}
+    > * + * {
+      @extend .margin-left-#{$name};
+    }
+  }
+}
+
+.li-md, .li-sm, .li-xs, .li-lg {
+  @extend .clearFloat;
+  > * {
+    float: left;
+  }
+}

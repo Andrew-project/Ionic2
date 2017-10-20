@@ -1,0 +1,14 @@
+.swiper-pagination-n {
+  position: static !important;
+  height: remSize(55);
+  line-height: remSize(55);
+  .swiper-pagination-bullet-active {
+    background: #00BD8F !important;
+  }
+  .swiper-pagination-bullet {
+    width: remSize(15) !important;
+    height: remSize(15) !important;
+    border-radius: remSize(15) !important;
+    margin: remSize(20) remSize(7) !important;
+  }
+}

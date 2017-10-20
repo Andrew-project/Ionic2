@@ -1,0 +1,14 @@
+@charset "utf-8";
+//基础radius
+$radiusSizeMap: (
+        "xs":remSize(2),
+        "sm":remSize(4),
+        "md":remSize(8),
+        "lg":remSize(16),
+        "full":remSize(65535)
+)!global;
+@each $name, $size in $radiusSizeMap {
+  .radius-#{$name} {
+    border-radius: $size;
+  }
+}

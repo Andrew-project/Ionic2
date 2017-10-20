@@ -1,0 +1,33 @@
+@charset "utf-8";
+//基础padding
+$paddingSizeMap: (
+        "xs":remSize(10),
+        "sm":remSize(20),
+        "md":remSize(30),
+        "lg":remSize(40)
+)!global;
+@each $name, $size in $paddingSizeMap {
+  .padding-#{$name} {
+    padding: $size;
+  }
+  .padding-top-#{$name} {
+    padding-top: $size;
+  }
+  .padding-bottom-#{$name} {
+    padding-bottom: $size;
+  }
+  .padding-left-#{$name} {
+    padding-left: $size;
+  }
+  .padding-right-#{$name} {
+    padding-right: $size;
+  }
+  .padding-width-#{$name} {
+    padding-right: $size;
+    padding-left: $size;
+  }
+  .padding-height-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+}

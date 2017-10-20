@@ -1,0 +1,77 @@
+
+html {
+  width: 100% !important;
+  min-height: 100% !important;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100% !important;
+  min-height: 100% !important;
+  overflow-x: hidden;
+  @extend .font-color-global-base, .background-color-global-lighter;
+}
+
+body > * {
+  margin: 0 auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:hover, a:link, a:visited {
+  color: map_get($fontColorMap, link);
+  //font-size: map_get($hMap, h5);
+}
+
+//a:hover {
+//  opacity: 0.8;
+//}
+
+ul, ol, li {
+  list-style: none;
+}
+
+iframe {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+p {
+  word-break: break-all;
+  text-align: justify;
+}
+
+//input[type='text'], input[type='password'], input[type='datetime-local'], input[type='tel'] {
+input {
+  outline: none;
+  border: 0;
+  //border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-appearance: textfield;
+  padding: 0;
+  margin: 0;
+  //&:after {
+  //  display: none;
+  //}
+}
+
+input::-webkit-input-placeholder, input::-moz-placeholder {
+  font-size: 1em;
+}

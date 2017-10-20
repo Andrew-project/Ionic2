@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle icon-only>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            动态
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="user-list">
+        <ion-item ion-item *ngFor="let friend of friends">
+            <ion-row>
+                <ion-col width-15>
+                    <ion-avatar>
+                        <img src="{{friend.avatar}}">
+                    </ion-avatar>
+                </ion-col>
+                <ion-col>
+                    <h1>{{friend.name}}</h1>
+                    <p margin-bottom>{{friend.remark}}</p>
+                    <div *ngIf="friend.pics">
+                        <div *ngFor="let url of friend.pics">
+                            <img src="{{url}}">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <button ion-button disabled icon-left text-center clear small color="dark">
+                        <ion-icon name="pin"></ion-icon>
+                        <div>{{friend.address}}</div>
+                    </button>
+                </ion-col>
+                <ion-col text-center>
+                    <button ion-button icon-right clear small (click)="addLike()">
+                        <ion-icon name="thumbs-up"></ion-icon>&nbsp;
+                        <div *ngIf="likesNum > 0">{{likesNum}} likes</div>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+</ion-content>

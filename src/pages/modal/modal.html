@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>modal</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-item>
+            <div>姓名: {{name}}</div>
+            <div>描述: {{desc}}</div>
+        </ion-item>
+    </ion-card>
+    <button ion-button (click)="onClose()" color="danger">Unremove Package</button>
+    <button ion-button (click)="onClose(true)" color="danger">Remove Package</button>
+</ion-content>

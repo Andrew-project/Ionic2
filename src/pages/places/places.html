@@ -1,0 +1,25 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button ion-only (click)="onNewPlace()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Places</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card *ngFor="let item of places" (click)="onOpenPlace(item)">
+        <img [src]="item.imageUrl">
+        <ion-card-content>
+            <ion-card-title>
+                {{item.title}}
+            </ion-card-title>
+            <p>{{item.description}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
